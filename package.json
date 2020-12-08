@@ -4,13 +4,18 @@
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
-    "build": "webpack && cd dist && bestzip bundle.zip bundle.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test:lint",
+    "test:lint": "eslint --ext \".js,.ts\" ./src",
+    "fix:lint": "eslint --ext \".js,.ts\" --fix ./src",
+    "build": "npm run test && webpack && cd dist && bestzip bundle.zip bundle.js"
   },
   "author": "Joseph Lee <development@jc-lab.net>",
   "private": true,
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
     "bestzip": "^2.1.5",
+    "eslint": "^6.8.0",
     "ts-loader": "^6.2.1",
     "ts-node-register": "^1.0.0",
     "tsconfig-paths": "^3.9.0",
