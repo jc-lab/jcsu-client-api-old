@@ -29,7 +29,7 @@
     "aws-sdk": "^2.559.0",
     "aws-serverless-express": "^3.3.6",
     "big-integer": "^1.6.47",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "js-express-server": "^1.0.29",
     "mysql": "^2.17.1",
     "openpgp": "^4.6.2"
